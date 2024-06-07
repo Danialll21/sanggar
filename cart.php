@@ -175,7 +175,7 @@ session_start();
         <li><a onclick="location.href='about.php'">ABOUT US</a></li>
         <li><a onclick="location.href='tableCust.php'">MENU</a></li>
         <li><a onclick="location.href='cart.php'">CART</a></li>
-        <li><a onclick="location.href='reservedTable.php'">RESERVED TABLE</a></li>
+        <li><a onclick="location.href='table-reservation.php'">RESERVED TABLE</a></li>
       </ul>
     </div>
   </div>
