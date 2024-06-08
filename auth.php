@@ -26,11 +26,11 @@
                 $role = $data['ROLE'];
             }
 
-            if ($role == 'Cashier')
+            if ($role == 'Admin')
             {
                 $_SESSION['username'] = $username;
                 header('Location: homepageCashier.php');
-            } else if($role == 'Chef') {
+            } else if($role == 'SuperAdmin') {
                 $_SESSION['username'] = $username;
                 header('Location: homepageChef.php');
             }else {

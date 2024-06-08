@@ -17,6 +17,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
   <style>
   body {
     font: 400 15px/1.8 Lato, sans-serif;
@@ -176,7 +177,8 @@ session_start();
         <li><a onclick="location.href='addMenu.php'">ADD MENU</a></li>
         <li><a onclick="location.href='menu.php'">EDIT MENU</a></li>
         <li><a onclick="location.href='custTable.php'">CUSTOMER PAYMENT</a></li>
-        <li><a href="logout.php">LOG OUT</a></li>
+        <li><a onclick="location.href='tableReserve.php'">TABLE RESERVATION</a></li>
+        <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i></a></li>
       </ul>
     </div>
   </div>

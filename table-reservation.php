@@ -4,20 +4,21 @@ include "connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <title>Sanggar Bistro Cafe</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-  body {
+    <title>Sanggar Bistro Cafe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
   }
@@ -36,9 +37,9 @@ include "connection.php";
     font-size: 20px;
   }
   .container {
-    padding: 80px 120px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 80px 0px;
+    margin-left: left;
+    margin-right: right;
   }
   .container-fluid {
     margin-left: auto;
@@ -164,12 +165,11 @@ include "connection.php";
     border: 5px solid #fff;
     width: 900px;
   }
-      
-      .table_reservation_section
+         .table_reservation_section
         {
-            max-width: 850px;
-            margin-right: 50px;
-            min-height: 500px;
+            margin-top: -50px;
+            margin-bottom: -100px;
+     
         }
 
         .check_availability_submit
@@ -203,6 +203,16 @@ include "connection.php";
             margin-top: 22px;
             text-transform: capitalize;
         }
+        .text_header_l
+        {
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+            line-height: 2.5;
+            margin-top: -70px;
+            text-transform: capitalize;
+        }
         .layer
         {
             height: 100%;
@@ -210,41 +220,40 @@ include "connection.php";
     background: -webkit-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
     background: linear-gradient(to bottom, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
         }
-  </style>
+
+    </style>
 </head>
+
 <body id="sanggarBistro" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <img src="Image/restaurant-image.png" alt="logo"
-       style="height: 70px; width: 85px;">
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav navbar-left">
-        <li><a onclick="location.href='homepageCust.php'">HOMEPAGE</a></li>
-        <li><a onclick="location.href='about.php'">ABOUT US</a></li>
-        <li><a onclick="location.href='tableCust.php'">MENU</a></li>
-        <li><a onclick="location.href='cart.php'">CART</a></li>
-        <li><a onclick="location.href='table-reservation.php'">RESERVED TABLE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="Image/restaurant-image.png" alt="logo" style="height: 70px; width: 85px;">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a onclick="location.href='homepageCust.php'">HOMEPAGE</a></li>
+                    <li><a onclick="location.href='about.php'">ABOUT US</a></li>
+                    <li><a onclick="location.href='tableCust.php'">MENU</a></li>
+                    <li><a onclick="location.href='cart.php'">CART</a></li>
+                    <li><a onclick="location.href='table-reservation.php'">RESERVED TABLE</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!-- Container (Red Panda Introduction) -->
-<div id="about" class="container text-center">
-  <h4>RESERVED TABLE</h4>
-      <!-- Modal content-->
- <section class="table_reservation_section">
+       <div id="about" class="container text-center">
+        <h4>RESERVED TABLE</h4>
+        <section class="table_reservation_section">
 
-        <div class="container">
-            <?php
+            <div class="container">
+                <?php
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -252,23 +261,18 @@ function test_input($data) {
     return $data;
 }
 
-// Include the database connection script
-require 'connection.php'; // Adjust the path to your connection script if necessary
 
 if(isset($_POST['submit_table_reservation_form']) && $_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    // Selected Date and Time
     $selected_date = $_POST['selected_date'];
     $selected_time = $_POST['selected_time'];
+    
     $desired_date = $selected_date." ".$selected_time;
 
-    // Number of Guests
     $number_of_guests = $_POST['number_of_guests'];
 
-    // Table ID
     $table_id = $_POST['table_id'];
 
-    // Client Details
     $client_full_name = test_input($_POST['client_full_name']);
     $client_phone_number = test_input($_POST['client_phone_number']);
 
@@ -301,52 +305,48 @@ if(isset($_POST['submit_table_reservation_form']) && $_SERVER['REQUEST_METHOD'] 
 }
 ?>
 
-            <div class="text_header">
-                <h2><em>Select Date & Time</em></h2>
-            </div>
-            <form method="POST" action="table-reservation.php">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                            <label for="reservation_date">Date</label>
-                            <input type="date" min="<?php echo (isset($_POST['reservation_date']))?$_POST['reservation_date']:date('Y-m-d',strtotime("+1day"));  ?>" 
-                            value = "<?php echo (isset($_POST['reservation_date']))?$_POST['reservation_date']:date('Y-m-d',strtotime("+1day"));  ?>"
-                            class="form-control" name="reservation_date">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                            <label for="reservation_time">Time</label>
-                            <input type="time" value="<?php echo (isset($_POST['reservation_time']))?$_POST['reservation_time']:date('H:i');  ?>" class="form-control" name="reservation_time">
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                            <label for="number_of_guests">How many people?</label>
-                            <select class="form-control" name="number_of_guests">
-                                <option value="1" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>
-                                    One person
-                                </option>
-                                <option value="2" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Two people</option>
-                                <option value="3" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Three people</option>
-                                <option value="4" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Four people</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                            <label for="check_availability" style="visibility: hidden;">Check Availability</label>
-                            <input type="submit" class="form-control check_availability_submit" name="check_availability_submit">
-                        </div>
-                    </div>
+                <div class="text_header">
+                    <h2><em>Select Date & Time</em></h2>
                 </div>
-            </form>
+                <form method="POST" action="table-reservation.php">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="reservation_date">Date</label>
+                                <input type="date" min="<?php echo (isset($_POST['reservation_date']))?$_POST['reservation_date']:date('Y-m-d',strtotime("+1day"));  ?>" value="<?php echo (isset($_POST['reservation_date']))?$_POST['reservation_date']:date('Y-m-d',strtotime("+1day"));  ?>" class="form-control" name="reservation_date">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="reservation_time">Time</label>
+                                <input type="time" id="reservation_time" value="<?php echo (isset($_POST['reservation_time']))?$_POST['reservation_time']:date('H:i');  ?>" class="form-control" name="reservation_time">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="number_of_guests">How many people?</label>
+                                <select class="form-control" name="number_of_guests" required>
+                                    <option value="" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Please Select!</option>
+                                    <option value="1" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>One person</option>
+                                    <option value="2" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Two people</option>
+                                    <option value="3" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Three people</option>
+                                    <option value="4" <?php echo (isset($_POST['number_of_guests']))?"selected":"";  ?>>Four people</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="form-group">
+                                <label for="check_availability" style="visibility: hidden;">Check Availability</label>
+                                <input type="submit" class="form-control check_availability_submit" name="check_availability_submit">
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
-            <!-- CHECKING AVAILABILITY OF TABLES -->
+                <!-- CHECKING AVAILABILITY OF TABLES -->
 
-<?php
-// Include the database connection script
-require 'connection.php'; // Adjust the path to your connection script if necessary
+                <?php
+require 'connection.php'; 
 
 if (isset($_POST['check_availability_submit'])) {
     $selected_date = $_POST['reservation_date'];
@@ -368,47 +368,47 @@ if (isset($_POST['check_availability_submit'])) {
 
     if ($result->num_rows == 0) {
         ?>
-        <div class="error_div">
-            <span class="error_message" style="font-size: 16px">ALL TABLES ARE RESERVED</span>
-        </div>
-        <?php
+                <div class="error_div">
+                    <span class="error_message" style="font-size: 16px">ALL TABLES ARE RESERVED</span>
+                </div>
+                <?php
     } else {
         $row = $result->fetch_assoc();
         $table_id = $row['table_id'];
         ?>
-        <div class="text_header">
-            <span>
-                2. Client details
-            </span>
-        </div>
-        <form method="POST" action="table-reservation.php">
-            <input type="hidden" name="selected_date" value="<?php echo $selected_date ?>">
-            <input type="hidden" name="selected_time" value="<?php echo $selected_time ?>">
-            <input type="hidden" name="number_of_guests" value="<?php echo $number_of_guests ?>">
-            <input type="hidden" name="table_id" value="<?php echo $table_id ?>">
-            <div class="client_details_tab">
-                <div class="form-group colum-row row">
-                    <div class="col-sm-12">
-                        <input type="text" name="client_full_name" id="client_full_name" oninput="document.getElementById('required_fname').style.display = 'none'" onkeyup="this.value=this.value.replace(/[^\sa-zA-Z]/g,'');" class="form-control" placeholder="Full name">
-                        <div class="invalid-feedback" id="required_fname">
-                            Invalid Name!
+                <div class="text_header">
+                    <span>
+                        2. Client details
+                    </span>
+                </div>
+                <form method="POST" action="table-reservation.php">
+                    <input type="hidden" name="selected_date" value="<?php echo $selected_date ?>">
+                    <input type="hidden" name="selected_time" value="<?php echo $selected_time ?>">
+                    <input type="hidden" name="number_of_guests" value="<?php echo $number_of_guests ?>">
+                    <input type="hidden" name="table_id" value="<?php echo $table_id ?>">
+                    <div class="client_details_tab">
+                        <div class="form-group colum-row row">
+                            <div class="col-sm-12">
+                                <input type="text" name="client_full_name" id="client_full_name" oninput="document.getElementById('required_fname').style.display = 'none'" onkeyup="this.value=this.value.replace(/[^\sa-zA-Z]/g,'');" class="form-control" placeholder="Full name" required>
+                                <div class="invalid-feedback" id="required_fname">
+                                    Invalid Name!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input type="text" name="client_phone_number" id="client_phone_number" oninput="document.getElementById('required_phone').style.display = 'none'" class="form-control" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="Phone number" required>
+                                <div class="invalid-feedback" id="required_phone">
+                                    Invalid Phone number!
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-6">
-                        <input type="text" name="client_phone_number" id="client_phone_number" oninput="document.getElementById('required_phone').style.display = 'none'" class="form-control" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="Phone number">
-                        <div class="invalid-feedback" id="required_phone">
-                            Invalid Phone number!
-                        </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit_table_reservation_form" class="btn btn-info" value="Make a Reservation">
                     </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" name="submit_table_reservation_form" class="btn btn-info" value="Make a Reservation">
-            </div>
-        </form>
-        <?php
+                </form>
+                <?php
     }
 
     $stmt->close();
@@ -416,100 +416,95 @@ if (isset($_POST['check_availability_submit'])) {
 
 $conn->close();
 ?>
-
-        </div>
-    </section>
-
-<!-- Container (Contact Section) -->
-<form action="addComment.php" method="post">
-<div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>Any Suggestion?  Let us know!</em></p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <p>Need more information? Contact us on:</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>17, Jalan Universiti 6, 86400 Parit Raja, Johor</p>
-      <p><span class="glyphicon glyphicon-phone"></span> Phone: +6011-2672 4577</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Email: sanggarBistro@gmail.com</p>
+            </div>
+        </section>
     </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+
+    <!-- Container (Contact Section) -->
+    <form action="addComment.php" method="post">
+        <div id="contact" class="container">
+            <h3 class="text-center">Contact</h3>
+            <p class="text-center"><em>Any Suggestion? Let us know!</em></p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Need more information? Contact us on:</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span>17, Jalan Universiti 6, 86400 Parit Raja, Johor</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> Phone: +6011-2672 4577</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> Email: sanggarBistro@gmail.com</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="suggestion" name="suggestion" placeholder="Suggestion" rows="5"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button class="btn pull-right" name="sent" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="suggestion" name="suggestion" placeholder="Suggestion" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" name="sent" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</form>
+    </form>
 
 
 
-<!-- Footer -->
-<footer class="text-center">
-  <a class="up-arrow" href="#sanggarBistro" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>For More Information: <a href="https://www.facebook.com/sanggarbistro/?locale=ms_MY" data-toggle="tooltip" title="More info about Sanggar Bistro">Click Here</a></p> 
-</footer>
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#sanggarBistro" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>For More Information: <a href="https://www.facebook.com/sanggarbistro/?locale=ms_MY" data-toggle="tooltip" title="More info about Sanggar Bistro">Click Here</a></p>
+    </footer>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
   
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+                        window.location.hash = hash;
+                    });
+                } 
+            });
+        })
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
+        var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
 
-      // Store hash
-      var hash = this.hash;
+  var formattedTime = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-    
-        // Get the modal
+  document.getElementById('reservation_time').value = formattedTime;
 
         var modalparent = document.getElementsByClassName("modal_multi");
 
-        // Get the button that opens the modal
 
         var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
 
-        // Get the <span> element that closes the modal
         var span_close_multi = document.getElementsByClassName("close_multi");
 
-        // When the user clicks the button, open the modal
         function setDataIndex() {
 
-            for (i = 0; i < modal_btn_multi.length; i++)
-            {
+            for (i = 0; i < modal_btn_multi.length; i++) {
                 modal_btn_multi[i].setAttribute('data-index', i);
                 modalparent[i].setAttribute('data-index', i);
                 span_close_multi[i].setAttribute('data-index', i);
@@ -518,14 +513,12 @@ $(document).ready(function(){
 
 
 
-        for (i = 0; i < modal_btn_multi.length; i++)
-        {
+        for (i = 0; i < modal_btn_multi.length; i++) {
             modal_btn_multi[i].onclick = function() {
                 var ElementIndex = this.getAttribute('data-index');
                 modalparent[ElementIndex].style.display = "block";
             };
 
-            // When the user clicks on <span> (x), close the modal
             span_close_multi[i].onclick = function() {
                 var ElementIndex = this.getAttribute('data-index');
                 modalparent[ElementIndex].style.display = "none";
@@ -533,21 +526,19 @@ $(document).ready(function(){
 
         }
 
-        for (i = 0; i < modal_btn_multi.length; i++)
-        {
+        for (i = 0; i < modal_btn_multi.length; i++) {
             modal_btn_multi[i].onclick = function() {
                 var ElementIndex = this.getAttribute('data-index');
                 modalparent[ElementIndex].style.display = "block";
             };
 
-            // When the user clicks on <span> (x), close the modal
             span_close_multi[i].onclick = function() {
                 var ElementIndex = this.getAttribute('data-index');
                 modalparent[ElementIndex].style.display = "none";
             };
 
         }
-        
+
         window.onload = function() {
 
             setDataIndex();
@@ -563,8 +554,8 @@ $(document).ready(function(){
                 modal.style.display = "none";
             }
         };
-
-</script>
+    </script>
 
 </body>
+
 </html>

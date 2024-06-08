@@ -200,7 +200,8 @@ session_start();
         <li><a onclick="location.href='addMenu.php'">ADD MENU</a></li>
         <li><a onclick="location.href='menu.php'">EDIT MENU</a></li>
         <li><a onclick="location.href='custTable.php'">CUSTOMER PAYMENT</a></li>
-        <li><a href="logout.php">LOG OUT</a></li>
+        <li><a onclick="location.href='tableReserve.php'">TABLE RESERVATION</a></li>
+        <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i></a></li>
       </ul>
     </div>
   </div>
@@ -208,7 +209,7 @@ session_start();
 
 <!-- Container (Red Panda Introduction) -->
 <div id="about" class="container text-center">
-<h4>DASHBOARD CASHIER</h4>
+<h4>DASHBOARD ADMIN</h4>
   <div id="order" class="bg-1">
       <!-- Modal content-->
       <div class="modal-content">
@@ -217,6 +218,7 @@ session_start();
             <a onclick="location.href='addMenu.php'" class="btn btn-primary btn-lg btn-block"><span class="fa fa-plus-circle"> ADD MENU</span></a><br>
             <a onclick="location.href='menu.php'" class="btn btn-primary btn-lg btn-block"><span class="fa fa-pencil-square-o"> EDIT MENU</span></a><br>
             <a onclick="location.href='custTable.php'" class="btn btn-primary btn-lg btn-block"><span class="fa fa-shopping-cart"> CUSTOMER PAYMENT</span></a><br>
+            <a onclick="location.href='tableReserve.php'" class="btn btn-primary btn-lg btn-block"><span class="fa fa-table"> TABLE RESERVATION</span></a><br>
             <a onclick="location.href='logout.php'" class="btn btn-primary btn-lg btn-block"><span class="fa fa-sign-out"> LOG OUT</span></a>
           </div>
       </div>

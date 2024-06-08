@@ -168,7 +168,7 @@ include "connection.php";
   .hideme
 {
     display:none;
-    visibility:hidden;
+    visibility:visible;
 }
 .showme
 {
@@ -197,7 +197,8 @@ include "connection.php";
         <li><a onclick="location.href='addMenu.php'">ADD MENU</a></li>
         <li><a onclick="location.href='menu.php'">EDIT MENU</a></li>
         <li><a onclick="location.href='custTable.php'">CUSTOMER PAYMENT</a></li>
-        <li><a href="logout.php">LOG OUT</a></li>
+        <li><a onclick="location.href='tableReserve.php'">TABLE RESERVATION</a></li>
+        <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i></a></li>
       </ul>
     </div>
   </div>
@@ -221,7 +222,8 @@ include "connection.php";
           <form action="updateMenu.php" method="post" role="form">
             <div class="form-group">
             <input type="text" id="id" name="id" class="hideme" value="<?php echo $data['ID'];?>">
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($data['IMAGE']); ?>" style="height: 300px; width: 400px;"/><br>
+            <img src="<?php echo htmlspecialchars($data['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/><br>
+            <br>
             <label for="psw"><span class=""></span> NAME: </label>
             <input type="text" id="name" name="name" class="form-control" value="<?php echo $data['NAME'];?>">
             <label for="psw"><span class=""></span> DESCRIPTION MENU:</label>

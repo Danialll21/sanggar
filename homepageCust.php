@@ -3,7 +3,6 @@ include "connection.php";
 
 $db = new mysqli;
 $db->connect('localhost','root','','sanggardb');
-//if($db){ echo "connection success";}
 
 $sql = "SELECT * FROM MENU";    
 
@@ -18,13 +17,12 @@ $rows=$val;
   <title>Sanggar Bistro Cafe</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>3
   <style>
   body {
     font: 400 15px/1.8 Lato, sans-serif;
@@ -45,7 +43,7 @@ $rows=$val;
     font-size: 20px;
   }
   .container {
-    padding: 80px 120px;
+    padding: 30px 120px;
   }
   .person {
     border: 10px solid transparent;
@@ -194,16 +192,15 @@ $rows=$val;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <img src="Image/restaurant-image.png" alt="logo"
-       style="height: 70px; width: 85px;">
+      <img src="Image/restaurant-image.png" alt="logo" style="height: 70px; width: 85px;">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav navbar-left">
-        <li><a onclick="location.href='homepageCust.php'">HOMEPAGE</a></li>
-        <li><a onclick="location.href='about.php'">ABOUT US</a></li>
-        <li><a onclick="location.href='tableCust.php'">MENU</a></li>
-        <li><a onclick="location.href='cart.php'">CART</a></li>
-        <li><a onclick="location.href='table-reservation.php'">RESERVED TABLE</a></li>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="homepageCust.php">HOMEPAGE</a></li>
+        <li><a href="about.php">ABOUT US</a></li>
+        <li><a href="tableCust.php">MENU</a></li>
+        <li><a href="cart.php">CART</a></li>
+        <li><a href="table-reservation.php">RESERVED TABLE</a></li>
       </ul>
     </div>
   </div>
@@ -266,7 +263,8 @@ $rows=$val;
     <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+         <br>
+          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -283,7 +281,8 @@ $rows=$val;
   <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+          <br>
+           <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -300,7 +299,8 @@ $rows=$val;
   <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+           <br>
+          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -313,7 +313,6 @@ $rows=$val;
 </div>
 </div>
 
-<!-- Container (POPULAR ITEM) -->
 <div id="order" class="bg-1">
   <div class="container">
     <h4 class="text-center">POPULAR ITEMS</h4>
@@ -327,7 +326,8 @@ $rows=$val;
     <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+          <br>
+          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -344,7 +344,8 @@ $rows=$val;
   <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+           <br>
+          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -361,7 +362,8 @@ $rows=$val;
   <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
+           <br>
+          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">

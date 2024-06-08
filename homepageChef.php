@@ -197,7 +197,7 @@ session_start();
     <ul class="nav navbar-nav navbar-left">
         <li><a onclick="location.href='homepageChef.php'">HOMEPAGE</a></li>
         <li><a onclick="location.href='profileChef.php'">MY PROFILE</a></li>
-        <li><a onclick="location.href='table.php'">CUSTOMER ORDER</a></li>
+        <li><a onclick="location.href='register.php'">ADD NEW ADMIN</a></li>
         <li><a href="logout.php">LOG OUT</a></li>
       </ul>
     </div>
@@ -206,7 +206,7 @@ session_start();
 
 <!-- Container (Red Panda Introduction) -->
 <div id="about" class="container text-center">
-<h4>DASHBOARD CHEF</h4>
+<h4>DASHBOARD ADMIN</h4>
   <div id="order" class="bg-1">
       <!-- Modal content-->
       <div class="modal-content">

@@ -225,10 +225,10 @@ margin-left: 4px;
                         </div>
                         
                             
-                            <input type="radio" name="role" value="Cashier" required>
-                            <label for="Cashier" style="color:White;">Cashier</label><br>
-                            <input type="radio" name="role" value="Chef" required>
-                            <label for="Chef" style="color:White;">Chef</label><br>
+                            <input type="radio" name="role" value="Admin" required>
+                            <label for="Admin" style="color:White;">Admin</label><br>
+                            <input type="radio" name="role" value="SuperAdmin" required>
+                            <label for="SuperAdmin" style="color:White;">SuperAdmin</label><br>
                        
                         <div class="form-group">
                         <input type="submit" name="submit" class="btn float-right register_btn">

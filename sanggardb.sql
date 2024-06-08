@@ -213,7 +213,7 @@ CREATE TABLE `user` (
   `NAME` varchar(30) NOT NULL,
   `USERNAME` varchar(30) DEFAULT NULL,
   `PASSWORD` varchar(30) DEFAULT NULL,
-  `ROLE` varchar(11) NOT NULL
+  `ROLE` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -222,7 +222,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `NAME`, `USERNAME`, `PASSWORD`, `ROLE`) VALUES
 ('a1', 'Arif', 'arif', '1234', 'Admin'),
-('b2', 'Hazim', 'margo', '5678', 'SuperAdmin');
+('b2', 'Hazim', 'margo', '5678', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -413,7 +413,9 @@ ALTER TABLE `reservations`
 --
 -- Constraints for dumped tables
 --
-
+DELETE reservations, clients FROM reservations
+INNER JOIN clients ON reservations.client_id = clients.client_id
+WHERE clients.client_name = 'client_name_here';
 --
 -- Constraints for table `contact`
 --

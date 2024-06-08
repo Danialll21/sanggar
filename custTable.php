@@ -207,7 +207,8 @@ if(isset($_POST['send'])){
         <li><a onclick="location.href='addMenu.php'">ADD MENU</a></li>
         <li><a onclick="location.href='menu.php'">EDIT MENU</a></li>
         <li><a onclick="location.href='custTable.php'">CUSTOMER PAYMENT</a></li>
-        <li><a href="logout.php">LOG OUT</a></li>
+        <li><a onclick="location.href='tableReserve.php'">TABLE RESERVATION</a></li>
+        <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i></a></li>
       </ul>
     </div>
   </div>

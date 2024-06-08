@@ -1,18 +1,13 @@
 <?php 
 include "connection.php";
 session_start();
-$db = new mysqli;
-$db->connect('localhost','root','','sanggardb');
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <title>Sanggar Bistro Cafe</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,6 +15,7 @@ $db->connect('localhost','root','','sanggardb');
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   body {
     font: 400 15px/1.8 Lato, sans-serif;
@@ -44,10 +40,6 @@ $db->connect('localhost','root','','sanggardb');
     margin-left: auto;
     margin-right: auto;
   }
-  .container-fluid {
-    margin-left: auto;
-    margin-right: auto;
-  }
   .person {
     border: 10px solid transparent;
     margin-bottom: 25px;
@@ -64,7 +56,7 @@ $db->connect('localhost','root','','sanggardb');
     }
   }
   .bg-1 {
-    background: #D34426;
+    background: #f2c7ac;
     color: #761401;
   }
   .bg-1 h3 {color: #fff;}
@@ -85,13 +77,6 @@ $db->connect('localhost','root','','sanggardb');
   .thumbnail p {
     margin-top: 15px;
     color: #555;
-  }
-  .btn {
-    padding: 10px 20px;
-    background-color: #560A02;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
   }
   .btn:hover, .btn:focus {
     border: 1px solid #333;
@@ -162,22 +147,12 @@ $db->connect('localhost','root','','sanggardb');
   }
   th {
     background-color: brown;
-    color: black;
+    color: white;
   }
   table, th, td {
     border: 5px solid #fff;
     width: 900px;
   }
-  .hideme
-{
-    display:none;
-    visibility:hidden;
-}
-.showme
-{
-    display:inline;
-    visibility:visible;
-}  
   </style>
 </head>
 <body id="sanggarBistro" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -195,11 +170,13 @@ $db->connect('localhost','root','','sanggardb');
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-left">
-        <li><a onclick="location.href='homepageCust.php'">HOMEPAGE</a></li>
-        <li><a onclick="location.href='about.php'">ABOUT US</a></li>
-        <li><a onclick="location.href='tableCust.php'">MENU</a></li>
-        <li><a onclick="location.href='cart.php'">CART</a></li>\
-        <li><a onclick="location.href='table-reservation.php'">RESERVED TABLE</a></li>
+        <li><a onclick="location.href='homepageCashier.php'">HOMEPAGE</a></li>
+        <li><a onclick="location.href='profileCashier.php'">MY PROFILE</a></li>
+        <li><a onclick="location.href='addMenu.php'">ADD MENU</a></li>
+        <li><a onclick="location.href='menu.php'">EDIT MENU</a></li>
+        <li><a onclick="location.href='custTable.php'">CUSTOMER PAYMENT</a></li>
+        <li><a onclick="location.href='tableReserve.php'">TABLE RESERVATION</a></li>
+        <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i></a></li>
       </ul>
     </div>
   </div>
@@ -207,43 +184,44 @@ $db->connect('localhost','root','','sanggardb');
 
 <!-- Container (Red Panda Introduction) -->
 <div id="about" class="container text-center">
-  <h4>MENU</h4>
-  <h4><?php echo $_SESSION['table'];?></h4>
-  <?php
+  <h4>TABLE RESERVATIONS</h4>
+</div> 
     
- $records = mysqli_query($conn, "SELECT * FROM menu");
-    
- while($data = mysqli_fetch_array($records))
- {
-    ?>   
-    <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-          <img src="<?php echo htmlspecialchars($data['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/><br>
-          <p><strong><?php echo $data['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p><?php echo $data['DESC_MENU'];?></p>
-          <p>Price: RM <?php echo $data['PRICE'];?></p>
-        <div style="text-align: center">
-          <form action="add.php" method="post" role="form">
-            <div class="form-group">
-            <input type="text" id="name" name="name" class="hideme" value="<?php echo $data['NAME'];?>">
-            <input type="text" id="price" name="price" class="hideme" value="<?php echo $data['PRICE'];?>">
-              <label for="psw"><span class="glyphicon glyphicon-tags"></span> Quantity</label>
-              <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity">
-              <input type="text" class="hideme" id="table" name="table" value="<?php echo $_SESSION['table'];?>">
-            </div>
-            <button type="submit" name="send" class="btn btn-block">Add To Cart 
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-              </button>
-          </form>
-        </div>
-        </div>
-      </div>        
+<!-- Container (Reservation) -->
+<div id="reservations" class="bg-1">
+  <div class="container">
+    <table class="w3-table w3-striped">
+      <tr>
+        <th>Client Name</th>
+        <th>Client Phone</th>
+        <th>Selected Time</th>
+        <th>Number of Guests</th>
+        <th>Table Number</th>
+        <th>Delete</th>
+      </tr>
+      
+      <tr>
+        <?php 
+        $records = mysqli_query($conn, "SELECT * FROM reservations INNER JOIN clients ON reservations.client_id = clients.client_id");
+        while($data = mysqli_fetch_array($records))
+        {
+          ?>
+          
+        <td><?php echo $data['client_name'];?></td>
+        <td><?php echo $data['client_phone'];?></td>     
+        <td><?php echo $data['selected_time'];?></td>
+        <td><?php echo $data['nbr_guests'];?></td>
+        <td><?php echo $data['table_id'];?></td>
+        <td><a href="deleteReserve.php?client_name=<?php echo urlencode($data['client_name']); ?>" class="btn btn-danger">Delete</a></td>
+      </tr>
+      
+      <?php
+      }
+      ?>
+      
+    </table>
+    <br>
   </div>
-  <?php
-}
-?>
- 
 </div>
 
 <!-- Container (Contact Section) -->
@@ -279,7 +257,6 @@ $db->connect('localhost','root','','sanggardb');
   </div>
 </div>
 </form>
-
 
 <!-- Footer -->
 <footer class="text-center">

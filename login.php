@@ -137,7 +137,7 @@ margin-left: 4px;
                             <input type="password" name="password" class="form-control" placeholder="password">
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="login" class="btn float-right login_btn">
+                            <input type="submit" name="Login" class="btn float-right login_btn">
                         </div>
                         
                         <?php
