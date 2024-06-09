@@ -209,7 +209,7 @@ include "connection.php";
   <h4>MANAGE MENU</h4>
   <?php
  
- $records = mysqli_query($conn, "SELECT * FROM menu");
+    $records = mysqli_query($conn, "SELECT * FROM menu");
     
  while($data = mysqli_fetch_array($records))
  {
@@ -222,7 +222,7 @@ include "connection.php";
           <form action="updateMenu.php" method="post" role="form">
             <div class="form-group">
             <input type="text" id="id" name="id" class="hideme" value="<?php echo $data['ID'];?>">
-            <img src="<?php echo htmlspecialchars($data['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/><br>
+            <img src="Image/<?php echo htmlspecialchars($data['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
             <br>
             <label for="psw"><span class=""></span> NAME: </label>
             <input type="text" id="name" name="name" class="form-control" value="<?php echo $data['NAME'];?>">

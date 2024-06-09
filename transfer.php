@@ -207,13 +207,13 @@ header("location:deleteOrder.php");
         <div class="modal-body">
           <form method="POST">
           <label for="psw"><span class="fa fa-credit-card"></span> Account Number:</label>
-            <input type="text" id="accnumber" name="accnumber" class="form-control" value="">
+            <input type="text" id="accnumber" name="accnumber" class="form-control" value=""required>
             <label for="psw"><span class="fa fa-user-circle-o"></span> Account Name:</label>
-            <input type="text" id="accname" name="accname" class="form-control" value="">
+            <input type="text" id="accname" name="accname" class="form-control" value=""required>
             <label for="psw"><span class="fa fa-credit-card"></span> Transfer To:</label>
             <input type="text" id="transfer" name="transfer" class="form-control" value="946589762145" readonly>
             <label for="psw"><span class="fa fa-user-circle-o"></span> Name:</label>
-            <input type="text" id="transfername" name="transfername" class="form-control" value="Muhamad Akmal Irfan Bin Lokman" readonly>
+            <input type="text" id="transfername" name="transfername" class="form-control" value="Muhamad Arif Danial bin Rosman" readonly>
               <label for="psw"><span class="fa fa-money"></span> Amount:</label>
               <input type="text" class="form-control" id="amount" name="amount" value="<?php echo $price;?>" readonly>
               

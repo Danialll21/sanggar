@@ -34,7 +34,7 @@ align-content: center;
 }
 
 .card{
-height: 350px;
+height: 300px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -137,7 +137,7 @@ margin-left: 4px;
                             <input type="password" name="password" class="form-control" placeholder="password">
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="Login" class="btn float-right login_btn">
+                            <input type="submit" name="Login" class="btn float-right login_btn" style="margin-top: 10px;">
                         </div>
                         
                         <?php

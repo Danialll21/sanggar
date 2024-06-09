@@ -219,7 +219,7 @@ $db->connect('localhost','root','','sanggardb');
     <div class="row text-center">
       <div>
         <div class="thumbnail">
-          <img src="<?php echo htmlspecialchars($data['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/><br>
+        <img src="Image/<?php echo htmlspecialchars($data['IMAGE']); ?>" style="height: 300px; width: 400px;"/><br>
           <p><strong><?php echo $data['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p><?php echo $data['DESC_MENU'];?></p>
           <p>Price: RM <?php echo $data['PRICE'];?></p>

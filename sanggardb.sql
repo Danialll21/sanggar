@@ -71,23 +71,23 @@ CREATE TABLE `menu` (
   `NAME` varchar(30) NOT NULL,
   `DESC_MENU` varchar(100) NOT NULL,
   `PRICE` decimal(9,2) DEFAULT NULL,
-  `IMAGE_URL` VARCHAR(255) DEFAULT NULL
+  `IMAGE` VARCHAR(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`ID`, `NAME`, `DESC_MENU`, `PRICE`, `IMAGE_URL`) VALUES
-(1, 'Banana Milkshake', 'Banana, Ice Cream, Milk.', 6.00, '/Sanggar Project/Image/Banana Milkshake.jpg'),
-(2, 'Chicken Chop', 'Fried Chicken Chop, Fries, Coleslaw, Chips, Black Pepper Sauce.', 12.90, '/Sanggar Project/Image/chickenChop.jpg'),
-(3, 'Grilled Beef Burger', '100% Australian Beef Patty, Homemade Bun, Sliced Cheese, Special Sauce.', 12.00, '/Sanggar Project/Image/burger.jpg'),
-(4, 'Grilled Salmon', 'Grilled Salmon, Fries, Coleslaw, Chips, Black Pepper Sauce.', 20.99, '/Sanggar Project/Image/grilledSalmon.jpg' ),
-(5, 'Lamb Chop', 'Grilled Lamb Chop, Fries, Coleslaw, Chips, Black Pepper Sauce.', 17.90, '/Sanggar Project/Image/lamb%20chop.jpg'),
-(6, 'Spaghetti Carbonara', 'Spaghetti with Carbonara Sauce, Chicken Slice, Chicken Sausage.', 12.00, '/Sanggar Project/Image/spaghetti.jpg' ),
-(7, 'Steak Platter', 'Grilled Steak, Fries, Coleslaw, Nuggets, Spaghetti Carbonara, Black Pepper Sauce.', 24.00, '/Sanggar Project/Image/steakPlatter.jpeg' ),
-(8, 'Teh Madu Ais', 'Tea, Honey, Condensed Milk, Ice.', 4.50, '/Sanggar Project/Image/teh%20ais%20madu.jpg'),
-(9, 'Watermelon Juice', 'Watermelon, Sugarcane, Ice.', 5.00, '/Sanggar Project/Image/Watermelon%20Juice.jpg' );
+INSERT INTO `menu` (`ID`, `NAME`, `DESC_MENU`, `PRICE`, `IMAGE`) VALUES
+(1, 'Banana Milkshake', 'Banana, Ice Cream, Milk.', 6.00, 'Banana Milkshake.jpg'),
+(2, 'Chicken Chop', 'Fried Chicken Chop, Fries, Coleslaw, Chips, Black Pepper Sauce.', 12.90, 'chickenChop.jpg'),
+(3, 'Grilled Beef Burger', '100% Australian Beef Patty, Homemade Bun, Sliced Cheese, Special Sauce.', 12.00, 'burger.jpg'),
+(4, 'Grilled Salmon', 'Grilled Salmon, Fries, Coleslaw, Chips, Black Pepper Sauce.', 20.99, 'grilledSalmon.jpg' ),
+(5, 'Lamb Chop', 'Grilled Lamb Chop, Fries, Coleslaw, Chips, Black Pepper Sauce.', 17.90, 'lamb%20chop.jpg'),
+(6, 'Spaghetti Carbonara', 'Spaghetti with Carbonara Sauce, Chicken Slice, Chicken Sausage.', 12.00, 'spaghetti.jpg' ),
+(7, 'Steak Platter', 'Grilled Steak, Fries, Coleslaw, Nuggets, Spaghetti Carbonara, Black Pepper Sauce.', 24.00, 'steakPlatter.jpeg' ),
+(8, 'Teh Madu Ais', 'Tea, Honey, Condensed Milk, Ice.', 4.50, 'teh%20ais%20madu.jpg'),
+(9, 'Watermelon Juice', 'Watermelon, Sugarcane, Ice.', 5.00, 'Watermelon%20Juice.jpg' );
 
 -- --------------------------------------------------------
 

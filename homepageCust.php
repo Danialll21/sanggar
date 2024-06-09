@@ -255,34 +255,20 @@ $rows=$val;
 <!-- Container (Order) -->
 <div id="order" class="bg-1">
   <div class="container">
-    <h4 class="text-center">PROMO PRICE</h4>
+    <h4 class="text-center">HOT SELLING ITEM</h4>
       <p class="text-center"><strong>Here we serve the best for you</strong><br><br>
     </p>
-        
-     <?php $row=$rows->fetch_assoc()?>   
-    <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-         <br>
-          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
-          <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p>Price: RM <?php echo $row['PRICE'];?></p>
-        <div style="text-align: center">
-          
-        </div>
-        </div>
-      </div>        
-  </div>
-  <?php $sql = "SELECT * FROM MENU WHERE NAME='Grilled Beef Burger'";    
+  
+    <?php $sql = "SELECT * FROM MENU";    
 
 $val=$db->query($sql);    
 $rows=$val;
- $row=$rows->fetch_assoc()?>  
-  <div class="row text-center">
+while($row = $rows->fetch_array()){ ?>
+     <div class="row text-center">
       <div>
         <div class="thumbnail">
           <br>
-           <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
+           <img src="Image/<?php echo htmlspecialchars($row['IMAGE']); ?>" style="height: 300px; width: 400px;"/>
           <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
           <p>Price: RM <?php echo $row['PRICE'];?></p>
         <div style="text-align: center">
@@ -291,88 +277,8 @@ $rows=$val;
         </div>
       </div>        
   </div>
-  <?php $sql = "SELECT * FROM MENU WHERE NAME='Grilled Salmon'";    
-
-$val=$db->query($sql);    
-$rows=$val;
- $row=$rows->fetch_assoc()?>  
-  <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-           <br>
-          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
-          <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p>Price: RM <?php echo $row['PRICE'];?></p>
-        <div style="text-align: center">
-          
-        </div>
-        </div>
-      </div>        
-  </div>
-<?php  ?>
-</div>
-</div>
-
-<div id="order" class="bg-1">
-  <div class="container">
-    <h4 class="text-center">POPULAR ITEMS</h4>
-      <p class="text-center"><strong>These are the top items that people adore.</strong><br><br>
-    </p>
-    <?php $sql = "SELECT * FROM MENU WHERE NAME='Lamb Chop'";    
-
-$val=$db->query($sql);    
-$rows=$val;
- $row=$rows->fetch_assoc()?>  
-    <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-          <br>
-          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
-          <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p>Price: RM <?php echo $row['PRICE'];?></p>
-        <div style="text-align: center">
-          
-        </div>
-        </div>
-      </div>        
-  </div>
-  <?php $sql = "SELECT * FROM MENU WHERE NAME='Spaghetti Carbonara'";    
-
-$val=$db->query($sql);    
-$rows=$val;
- $row=$rows->fetch_assoc()?>  
-  <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-           <br>
-          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
-          <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p>Price: RM <?php echo $row['PRICE'];?></p>
-        <div style="text-align: center">
-          
-        </div>
-        </div>
-      </div>        
-  </div>
-  <?php $sql = "SELECT * FROM MENU WHERE NAME='Steak Platter'";    
-
-$val=$db->query($sql);    
-$rows=$val;
- $row=$rows->fetch_assoc()?>  
-  <div class="row text-center">
-      <div>
-        <div class="thumbnail">
-           <br>
-          <img src="<?php echo htmlspecialchars($row['IMAGE_URL']); ?>" style="height: 300px; width: 400px;"/>
-          <p><strong><?php echo $row['NAME'];?></strong><span class="glyphicon glyphicon-fire"></span></p>
-          <p>Price: RM <?php echo $row['PRICE'];?></p>
-        <div style="text-align: center">
-          
-        </div>
-        </div>
-      </div>        
-  </div>
-<?php  ?>
+ <?php } ?>
+ 
 </div>
 </div>
 
