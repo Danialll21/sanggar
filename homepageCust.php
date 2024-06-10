@@ -57,7 +57,7 @@ $rows=$val;
   }
   .carousel-inner img {
     width: 100%; /* Set width to 100% */
-    margin: auto;
+    margin-bottom: -150px;
   }
   .carousel-caption h3 {
     color: #fff !important;
@@ -229,7 +229,7 @@ $rows=$val;
       </div>
     
       <div class="item">
-        <img src="Image/login%20sanggar.jpg" alt="redpanda3" height="700px" width="1200px">
+        <img src="Image/sanggar%20login.jpg" alt="redpanda3" height="700px" width="1200px">
         <div class="carousel-caption">
         </div>      
       </div>

@@ -21,7 +21,7 @@ require_once "connection.php";
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('Image/login%20sanggar.jpg');
+background-image: url('Image/SANGGAR%20BISTRO%20(1).png');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
