@@ -15,172 +15,216 @@ include "connection.php";
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Image/restaurant-image.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
-
-  h1 {
-      margin: 20px;
-      letter-spacing: 10px;
-      font-size: 80px;
-      color: #B62511;
-          
-    }
-
-  h4 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 2px;      
-    font-size: 20px;
-  }
-  .container {
-    padding: 80px 0px;
-    margin-left: left;
-    margin-right: right;
-  }
-  .container-fluid {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-  }
-  .person:hover {
-    border-color: #f1f1f1;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-    background: #D34426;
-    color: #761401;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-  }
-  .thumbnail p {
-    margin-top: 15px;
-    color: #555;
-  }
-  .btn {
-    padding: 10px 20px;
-    background-color: #560A02;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
-  .modal-header, h4, .close {
-    background-color: #8e1e07;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-header, .modal-body {
-    padding: 40px 50px;
-  }
-  .nav-tabs li a {
-    color: #B62511;
-  }
-  .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #741a0d;
-    border: 0;
-    font-size: 15px !important;
-    letter-spacing: 6px;
-    opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #B62511 !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  .open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-    background-color: red !important;
-  }
-  footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  footer a:hover {
-    color: #777;
-    text-decoration: none;
-  }  
-  .form-control {
-    border-radius: 0;
-  }
-  textarea {
-    resize: none;
-  }
-  th {
-    background-color: brown;
-    color: black;
-  }
-  table, th, td {
-    border: 5px solid #fff;
-    width: 900px;
-  }
-         .table_reservation_section
-        {
-            margin-top: -50px;
-            margin-bottom: -100px;
-     
+            font: 400 15px/1.8 Lato, sans-serif;
+            color: #777;
         }
 
-        .check_availability_submit
-        {
+        h1 {
+            margin: 20px;
+            letter-spacing: 10px;
+            font-size: 80px;
+            color: #B62511;
+
+        }
+
+        h4 {
+            margin: 10px 0 30px 0;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+
+        .container {
+            padding: 80px 0px;
+            margin-left: left;
+            margin-right: right;
+        }
+
+        .container-fluid {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .person {
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+            width: 80%;
+            height: 80%;
+            opacity: 0.7;
+        }
+
+        .person:hover {
+            border-color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+                /* Hide the carousel text when the screen is less than 600 pixels wide */
+            }
+        }
+
+        .bg-1 {
+            background: #D34426;
+            color: #761401;
+        }
+
+        .bg-1 h3 {
+            color: #fff;
+        }
+
+        .bg-1 p {
+            font-style: italic;
+        }
+
+        .list-group-item:first-child {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .list-group-item:last-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #560A02;
+            color: #f1f1f1;
+            border-radius: 0;
+            transition: .2s;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .modal-header,
+        h4,
+        .close {
+            background-color: #8e1e07;
+            color: #fff !important;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-header,
+        .modal-body {
+            padding: 40px 50px;
+        }
+
+        .nav-tabs li a {
+            color: #B62511;
+        }
+
+        .navbar {
+            font-family: Montserrat, sans-serif;
+            margin-bottom: 0;
+            background-color: #741a0d;
+            border: 0;
+            font-size: 15px !important;
+            letter-spacing: 6px;
+            opacity: 0.9;
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #d5d5d5 !important;
+        }
+
+        .navbar-nav li a:hover {
+            color: #fff !important;
+        }
+
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color: #B62511 !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+        }
+
+        .open .dropdown-toggle {
+            color: #fff;
+            background-color: #555 !important;
+        }
+
+        .dropdown-menu li a {
+            color: #000 !important;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: red !important;
+        }
+
+        footer {
+            background-color: #2d2d30;
+            color: #f5f5f5;
+            padding: 32px;
+        }
+
+        footer a {
+            color: #f5f5f5;
+        }
+
+        footer a:hover {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .form-control {
+            border-radius: 0;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        th {
+            background-color: brown;
+            color: black;
+        }
+
+        table,
+        th,
+        td {
+            border: 5px solid #fff;
+            width: 900px;
+        }
+
+        .table_reservation_section {
+            margin-top: -50px;
+            margin-bottom: -100px;
+
+        }
+
+        .check_availability_submit {
             background: #ffc851;
             color: white;
             border-color: #ffc851;
-            font-family: work sans,sans-serif;
+            font-family: work sans, sans-serif;
         }
-        .client_details_tab  .form-control
-        {
+
+        .client_details_tab .form-control {
             background-color: #fff;
             border-radius: 0;
             padding: 25px 10px;
@@ -188,14 +232,13 @@ include "connection.php";
             border: 2px solid #eee;
         }
 
-        .client_details_tab  .form-control:focus 
-        {
+        .client_details_tab .form-control:focus {
             border-color: #ffc851;
             box-shadow: none;
             outline: none;
         }
-        .text_header
-        {
+
+        .text_header {
             margin-bottom: 5px;
             font-size: 18px;
             font-weight: bold;
@@ -203,8 +246,8 @@ include "connection.php";
             margin-top: 22px;
             text-transform: capitalize;
         }
-        .text_header_l
-        {
+
+        .text_header_l {
             margin-bottom: 5px;
             font-size: 18px;
             font-weight: bold;
@@ -213,14 +256,13 @@ include "connection.php";
             margin-top: -70px;
             text-transform: capitalize;
         }
-        .layer
-        {
-            height: 100%;
-        background: -moz-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
-    background: -webkit-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
-    background: linear-gradient(to bottom, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
-        }
 
+        .layer {
+            height: 100%;
+            background: -moz-linear-gradient(top, rgba(45, 45, 45, 0.4) 0%, rgba(45, 45, 45, 0.9) 100%);
+            background: -webkit-linear-gradient(top, rgba(45, 45, 45, 0.4) 0%, rgba(45, 45, 45, 0.9) 100%);
+            background: linear-gradient(to bottom, rgba(45, 45, 45, 0.4) 0%, rgba(45, 45, 45, 0.9) 100%);
+        }
     </style>
 </head>
 
@@ -248,7 +290,7 @@ include "connection.php";
         </div>
     </nav>
 
-       <div id="about" class="container text-center">
+    <div id="about" class="container text-center">
         <h4>RESERVED TABLE</h4>
         <section class="table_reservation_section">
 
@@ -420,8 +462,49 @@ $conn->close();
         </section>
     </div>
 
+    <?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sent'])) {
+    $db = new mysqli('localhost', 'root', '', 'sanggardb');
+
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    }
+
+    $name = test_input($_POST['name']);
+    $email = test_input($_POST['email']);
+    $comment = test_input($_POST['suggestion']);
+
+    $db->begin_transaction();
+    
+    try {
+        $stmt = $db->prepare("INSERT INTO CONTACT (NAME, EMAIL, SUGGESTION) VALUES (?, ?, ?)");
+        
+        if ($stmt) {
+            $stmt->bind_param("sss", $name, $email, $comment);
+            
+            if ($stmt->execute()) {
+                echo "<div id='success-message' class='alert alert-success' style='text-align: center;'>Great! Your Message has been sent!</div>";
+                $db->commit(); 
+            } else {
+                throw new Exception("Error executing statement: " . $stmt->error);
+            }
+            
+            $stmt->close();
+        } else {
+            throw new Exception("Error preparing statement: " . $db->error);
+        }
+    } catch (Exception $e) {
+        $db->rollback();
+        echo "<div class='alert alert-danger'>" . $e->getMessage() . "</div>";
+    }
+
+    $db->close();
+}
+?>
+
     <!-- Container (Contact Section) -->
-    <form action="addComment.php" method="post">
+    <form action="table-reservation.php" method="POST">
         <div id="contact" class="container">
             <h3 class="text-center">Contact</h3>
             <p class="text-center"><em>Any Suggestion? Let us know!</em></p>
@@ -429,7 +512,7 @@ $conn->close();
             <div class="row">
                 <div class="col-md-4">
                     <p>Need more information? Contact us on:</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span>17, Jalan Universiti 6, 86400 Parit Raja, Johor</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> 17, Jalan Universiti 6, 86400 Parit Raja, Johor</p>
                     <p><span class="glyphicon glyphicon-phone"></span> Phone: +6011-2672 4577</p>
                     <p><span class="glyphicon glyphicon-envelope"></span> Email: sanggarBistro@gmail.com</p>
                 </div>
@@ -454,8 +537,6 @@ $conn->close();
         </div>
     </form>
 
-
-
     <!-- Footer -->
     <footer class="text-center">
         <a class="up-arrow" href="#sanggarBistro" data-toggle="tooltip" title="TO TOP">
@@ -476,24 +557,24 @@ $conn->close();
 
                     var hash = this.hash;
 
-  
+
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
                     }, 900, function() {
 
                         window.location.hash = hash;
                     });
-                } 
+                }
             });
         })
 
         var currentTime = new Date();
-  var hours = currentTime.getHours();
-  var minutes = currentTime.getMinutes();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
 
-  var formattedTime = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+        var formattedTime = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
 
-  document.getElementById('reservation_time').value = formattedTime;
+        document.getElementById('reservation_time').value = formattedTime;
 
         var modalparent = document.getElementsByClassName("modal_multi");
 
@@ -554,6 +635,10 @@ $conn->close();
                 modal.style.display = "none";
             }
         };
+        
+        setTimeout(function() {
+            document.getElementById('success-message').style.display = 'none';
+        }, 10000);
     </script>
 
 </body>

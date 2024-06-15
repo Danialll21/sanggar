@@ -47,7 +47,7 @@ INSERT INTO `clients` (`client_id`, `client_name`, `client_phone`) VALUES
 --
 
 CREATE TABLE `contact` (
-  `USER_ID` varchar(30) NOT NULL,
+  `USER_ID` int(5) NOT NULL,
   `NAME` varchar(30) NOT NULL,
   `EMAIL` varchar(30) DEFAULT NULL,
   `SUGGESTION` varchar(200) DEFAULT NULL
@@ -58,7 +58,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`USER_ID`, `NAME`, `EMAIL`, `SUGGESTION`) VALUES
-('a1', 'Arif', 'arif@gmail.com', 'Cant wait to go visit the restaurant');
+('1', 'Arif', 'arif@gmail.com', 'Cant wait to go visit the restaurant');
 
 -- --------------------------------------------------------
 
@@ -411,17 +411,17 @@ ALTER TABLE `reservations`
   MODIFY `reservation_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
   
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT;
+  
+--
 -- Constraints for dumped tables
 --
 DELETE reservations, clients FROM reservations
 INNER JOIN clients ON reservations.client_id = clients.client_id
 WHERE clients.client_name = 'client_name_here';
---
--- Constraints for table `contact`
---
-ALTER TABLE `contact`
-  ADD CONSTRAINT `User` FOREIGN KEY (`USER_ID`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

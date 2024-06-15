@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+
 <body>
-<?php
+    <?php
     include "connection.php";
     session_start();
     
@@ -46,4 +47,5 @@
 }
 ?>
 </body>
+
 </html>
