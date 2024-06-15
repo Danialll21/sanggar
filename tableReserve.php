@@ -267,86 +267,11 @@ session_start();
             <br>
         </div>
     </div>
-
-    <?php
-function test_input($data) {
-    $data = trim($data);          
-    $data = htmlspecialchars($data); 
-    return $data;
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sent'])) {
-    $db = new mysqli('localhost', 'root', '', 'sanggardb');
-
-    if ($db->connect_error) {
-        die("Connection failed: " . $db->connect_error);
-    }
-
-    $name = test_input($_POST['name']);
-    $email = test_input($_POST['email']);
-    $comment = test_input($_POST['suggestion']);
-
-    $db->begin_transaction();
-    
-    try {
-        $stmt = $db->prepare("INSERT INTO CONTACT (NAME, EMAIL, SUGGESTION) VALUES (?, ?, ?)");
-        
-        if ($stmt) {
-            $stmt->bind_param("sss", $name, $email, $comment);
-            
-            if ($stmt->execute()) {
-                echo "<div id='success-message' class='alert alert-success' style='text-align: center;'>Great! Your Message has been sent!</div>";
-                $db->commit(); 
-            } else {
-                throw new Exception("Error executing statement: " . $stmt->error);
-            }
-            
-            $stmt->close();
-        } else {
-            throw new Exception("Error preparing statement: " . $db->error);
-        }
-    } catch (Exception $e) {
-        $db->rollback();
-        echo "<div class='alert alert-danger'>" . $e->getMessage() . "</div>";
-    }
-
-    $db->close();
-}
-?>
-
-    <!-- Container (Contact Section) -->
-    <form action="tableReserve.php" method="POST">
-        <div id="contact" class="container">
-            <h3 class="text-center">Contact</h3>
-            <p class="text-center"><em>Any Suggestion? Let us know!</em></p>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <p>Need more information? Contact us on:</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> 17, Jalan Universiti 6, 86400 Parit Raja, Johor</p>
-                    <p><span class="glyphicon glyphicon-phone"></span> Phone: +6011-2672 4577</p>
-                    <p><span class="glyphicon glyphicon-envelope"></span> Email: sanggarBistro@gmail.com</p>
-                </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="suggestion" name="suggestion" placeholder="Suggestion" rows="5"></textarea>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <button class="btn pull-right" name="sent" type="submit">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Footer -->
     <footer class="text-center">
         <a class="up-arrow" href="#sanggarBistro" data-toggle="tooltip" title="TO TOP">
@@ -451,10 +376,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sent'])) {
                 modal.style.display = "none";
             }
         };
-        
-        setTimeout(function() {
-            document.getElementById('success-message').style.display = 'none';
-        }, 10000);
     </script>
 
 </body>
